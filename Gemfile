@@ -34,6 +34,9 @@ gem 'rails_admin', '~> 0.6.1'
 # Authentication
 gem 'devise', '~> 3.2.4'
 
+# Forms
+gem 'simple_form', '~> 3.0.1'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

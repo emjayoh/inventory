@@ -11,7 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140327051659) do
+ActiveRecord::Schema.define(version: 20140331013621) do
+
+  create_table "customers", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "items", force: true do |t|
+    t.string   "serial"
+    t.string   "location"
+    t.integer  "lot"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "lots", force: true do |t|
+    t.string   "item_number"
+    t.integer  "quantity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products", force: true do |t|
+    t.string   "item_number"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -30,5 +60,13 @@ ActiveRecord::Schema.define(version: 20140327051659) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "vendors", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

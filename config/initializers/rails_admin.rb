@@ -58,7 +58,7 @@ RailsAdmin.config do |config|
     navigation_label 'Partners'
   end
 
-  config.model 'Items' do
+  config.model 'Item' do
     navigation_label 'Stock'
   end
 

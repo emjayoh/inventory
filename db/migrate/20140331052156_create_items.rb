@@ -3,7 +3,8 @@ class CreateItems < ActiveRecord::Migration
     create_table :items do |t|
       t.string :serial
       t.string :location
-      t.integer :lot
+      t.integer :lot_id
+      t.integer :product_id
 
       t.timestamps
     end

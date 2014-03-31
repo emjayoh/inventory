@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140331020633) do
+ActiveRecord::Schema.define(version: 20140331053831) do
 
   create_table "customers", force: true do |t|
     t.string   "name"
@@ -24,13 +24,14 @@ ActiveRecord::Schema.define(version: 20140331020633) do
   create_table "items", force: true do |t|
     t.string   "serial"
     t.string   "location"
-    t.integer  "lot"
+    t.integer  "lot_id"
+    t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "lots", force: true do |t|
-    t.string   "item_number"
+    t.integer  "product_id"
     t.integer  "quantity"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -44,7 +45,7 @@ ActiveRecord::Schema.define(version: 20140331020633) do
   end
 
   create_table "receipts", force: true do |t|
-    t.integer  "vendor"
+    t.integer  "vendor_id"
     t.datetime "date"
     t.integer  "po_number"
     t.datetime "created_at"
@@ -52,7 +53,7 @@ ActiveRecord::Schema.define(version: 20140331020633) do
   end
 
   create_table "shipments", force: true do |t|
-    t.integer  "customer"
+    t.integer  "customer_id"
     t.datetime "date"
     t.integer  "invoice_number"
     t.boolean  "is_returned"

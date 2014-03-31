@@ -1,7 +1,7 @@
 class CreateLots < ActiveRecord::Migration
   def change
     create_table :lots do |t|
-      t.string :item_number
+      t.integer :product_id
       t.integer :quantity
 
       t.timestamps

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer: 1
+  date: 2014-03-30 19:05:46
+  invoice_number: 1
+  is_returned: false
+
+two:
+  customer: 1
+  date: 2014-03-30 19:05:46
+  invoice_number: 1
+  is_returned: false

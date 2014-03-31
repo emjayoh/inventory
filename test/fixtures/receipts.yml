@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vendor: 1
+  date: 2014-03-30 19:06:33
+  po_number: 1
+
+two:
+  vendor: 1
+  date: 2014-03-30 19:06:33
+  po_number: 1

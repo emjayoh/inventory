@@ -44,6 +44,14 @@ RailsAdmin.config do |config|
 
   config.model 'Receipt' do
     navigation_label 'Transactions'
+
+    #list do
+    #
+    #end
+    #
+    #show do
+    #
+    #end
   end
 
   config.model 'Shipment' do
@@ -64,6 +72,15 @@ RailsAdmin.config do |config|
 
   config.model 'Product' do
     navigation_label 'Stock'
+
+    list do
+      field :whatever do
+        def value
+          #TODO Change to where...
+          Item.all.count
+        end
+      end
+    end
   end
 
   config.model 'Lot' do

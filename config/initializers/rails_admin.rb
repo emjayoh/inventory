@@ -49,4 +49,25 @@ RailsAdmin.config do |config|
   config.model 'Shipment' do
     navigation_label 'Transactions'
   end
+
+  config.model 'Customer' do
+    navigation_label 'Partners'
+  end
+
+  config.model 'Vendor' do
+    navigation_label 'Partners'
+  end
+
+  config.model 'Items' do
+    navigation_label 'Stock'
+  end
+
+  config.model 'Product' do
+    navigation_label 'Stock'
+  end
+
+  config.model 'Lot' do
+    navigation_label 'Stock'
+  end
+
 end

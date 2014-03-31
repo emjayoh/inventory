@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140331053831) do
+ActiveRecord::Schema.define(version: 20140331054957) do
 
   create_table "customers", force: true do |t|
     t.string   "name"
@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20140331053831) do
     t.string   "serial"
     t.string   "location"
     t.integer  "lot_id"
-    t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -51,6 +50,12 @@ ActiveRecord::Schema.define(version: 20140331053831) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "schema_migrations_copy", id: false, force: true do |t|
+    t.string "version", null: false
+  end
+
+  add_index "schema_migrations_copy", ["version"], name: "unique_schema_migrations", unique: true, using: :btree
 
   create_table "shipments", force: true do |t|
     t.integer  "customer_id"

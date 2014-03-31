@@ -4,7 +4,6 @@ class CreateItems < ActiveRecord::Migration
       t.string :serial
       t.string :location
       t.integer :lot_id
-      t.integer :product_id
 
       t.timestamps
     end

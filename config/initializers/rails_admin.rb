@@ -37,4 +37,16 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model 'User' do
+    navigation_label 'Admin'
+  end
+
+  config.model 'Receipt' do
+    navigation_label 'Transactions'
+  end
+
+  config.model 'Shipment' do
+    navigation_label 'Transactions'
+  end
 end
